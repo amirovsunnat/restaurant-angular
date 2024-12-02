@@ -1,0 +1,12 @@
+<div class="order-summary">
+    <h3>Order Summary</h3>
+    <ul>
+      <li *ngFor="let order of orders">
+        {{ order.product }} - ${{ order.price }} x {{ order.quantity }} = ${{ order.total }}
+      </li>
+    </ul>
+    <p><strong>Subtotal:</strong> ${{ subtotal.toFixed(2) }}</p>
+    <p><strong>Tax ({{ taxRate }}%):</strong> ${{ tax.toFixed(2) }}</p>
+    <p><strong>Total:</strong> ${{ overallTotal.toFixed(2) }}</p>
+  </div>
+  

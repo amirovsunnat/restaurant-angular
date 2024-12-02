@@ -1,0 +1,15 @@
+<div class="modal">
+    <div class="modal-content">
+      <h2>Confirm Your Order</h2>
+      <p><strong>Total Amount:</strong> ${{ total.toFixed(2) }}</p>
+      <h3>Items:</h3>
+      <ul>
+        <li *ngFor="let order of orderDetails">
+          {{ order.product }} - ${{ order.price }} x {{ order.quantity }} = ${{ order.total }}
+        </li>
+      </ul>
+      <button (click)="confirm()" class="btn btn-success">Confirm Order</button>
+      <button (click)="cancel()" class="btn btn-danger">Cancel</button>
+    </div>
+  </div>
+  
